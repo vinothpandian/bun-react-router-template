@@ -11,7 +11,7 @@ import type { Route } from "../+types/home";
 import { AppConfig } from "~/lib/constants/config";
 import { Link, redirect } from "react-router";
 import { AppRoutes } from "~/routes";
-import { zodResolver } from "mantine-form-zod-resolver";
+import { zod4Resolver } from "mantine-form-zod-resolver";
 import { z } from "zod";
 import { useForm } from "@mantine/form";
 import { useFetcher } from "react-router";
@@ -72,7 +72,7 @@ export default function ResetPassword() {
       password: "",
       confirmPassword: "",
     },
-    validate: zodResolver(schema),
+    validate: zod4Resolver(schema),
   });
 
   return (
